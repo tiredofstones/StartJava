@@ -135,6 +135,9 @@ public class VariablesTheme {
             int min = time/60%60;
             int sec = time%60;
             System.out.println("\n" + hour + ":" + min + ":" + sec);
+        
+        System.out.print("Написано однажды, ");
+        System.out.println("работает везде!");
 
     }
 }
