@@ -1,9 +1,0 @@
-public class Whileloops {   
-    public static void main(String[] args) {
-        int value  = 0;
-        while(value<15){
-            System.out.println("Привет" +value);
-            value = value+1;
-        }
-    }
-}        
