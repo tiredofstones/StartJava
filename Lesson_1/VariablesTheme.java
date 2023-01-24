@@ -137,7 +137,7 @@ public class VariablesTheme {
             System.out.println("\n" + hour + ":" + min + ":" + sec);
         
         System.out.print("Написано однажды, ");
-        System.out.println("работает везде!");
+        System.out.println("работает везде и всегда!");
 
     }
 }
