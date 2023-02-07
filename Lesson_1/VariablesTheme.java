@@ -17,6 +17,8 @@ public class VariablesTheme {
         System.out.println("Частота процессора " + cpuFrequency + "Гц");
         char companyManufacturer = 'M';
         System.out.println("Фирма производитель : " + companyManufacturer + "SI");
+        boolean backlight = true;
+        System.out.println("Наличие подсветки : " + backlight);
 
         System.out.println("\nЗадача 2: Расчет стоимости товара со скидкой");
         double pricePen = 100, priceBook = 200;
@@ -33,14 +35,14 @@ public class VariablesTheme {
         System.out.println(" JJ  a     a  V  a     a");
 
         System.out.println("\nЗадача 4: Вывод min и max значений целых числовых типов");
-        byte maxValueByte = 127;
-        System.out.println(maxValueByte + " "  + maxValueByte++ + " " + maxValueByte--);
-        short maxValueShort = 32767;
-        System.out.println(maxValueShort + " " + maxValueShort++ + " " + maxValueShort--);
-        int maxValueInt = 2147483647;
-        System.out.println(maxValueInt + " " + maxValueInt++ + " " + maxValueInt--);
-        long maxValueLong = 9223372036854775807L;
-        System.out.println(maxValueLong + " " + maxValueLong++ + " " + maxValueLong);
+        byte maxNumByte = 127;
+        System.out.println(maxNumByte + " "  + ++maxNumByte + " " + --maxNumByte);
+        short maxNumShort = 32767;
+        System.out.println(maxNumShort + " " + ++maxNumShort + " " + --maxNumShort);
+        int maxNumInt = 2147483647;
+        System.out.println(maxNumInt + " " + ++maxNumInt + " " + --maxNumInt);
+        long maxNumLong = 9223372036854775807L;
+        System.out.println(maxNumLong + " " + ++maxNumLong + " " + --maxNumLong);
 
         System.out.println("\nЗадача 5: Перестановка значений переменных");
 
@@ -68,30 +70,30 @@ public class VariablesTheme {
         System.out.println("a = " + num1 + " " + "b = " + num2);
 
         System.out.println("\nЗадача 6: Вывод символов и их кодов");
-        int codeHash = 35;
-        System.out.println(codeHash + "-" + (char)codeHash);
-        int codeAmpersand = 38;
-        System.out.println(codeAmpersand + "-" + (char)codeAmpersand);
-        int codeAt = 64;
-        System.out.println(codeAt + "-" + (char)codeAt);
-        int codeCaret = 94;
-        System.out.println(codeCaret + "-" + (char)codeCaret);
-        int codeUnderscore = 95;
-        System.out.println(codeUnderscore + "-" + (char)codeUnderscore);
+        char codeHash = '#';
+        System.out.println((int) codeHash + "-" + codeHash);
+        char codeAmpersand = '&';
+        System.out.println((int) codeAmpersand + "-" + codeAmpersand);
+        char codeAt = '@';
+        System.out.println((int) codeAt + "-" + codeAt);
+        char codeCaret = '^';
+        System.out.println((int) codeCaret + "-" + codeCaret);
+        char codeUnderscore = '_';
+        System.out.println((int) codeUnderscore + "-" + codeUnderscore);
 
         System.out.println("\nЗадача 7: Вывод в консоль ASCII-арт Дюка");
-        char forwardSlash = (char)'/';
-        char backwardSlash = (char) '\';
-        char underscore = (char)'_';
-        char leftParentheses = (char)'(';
-        char rightParentheses = (char)')';
-        System.out.println("\n     " + forwardSlash + backwardSlash);
-        System.out.println("    " + forwardSlash + "  " + backwardSlash);
-        System.out.println("   " + forwardSlash + underscore + leftParentheses + " " + 
-        rightParentheses + backwardSlash);
-        System.out.println("  " + forwardSlash + "      " + backwardSlash);
-        System.out.println(" " + forwardSlash + underscore + underscore + underscore + forwardSlash
-         + backwardSlash + underscore + underscore + underscore + backwardSlash);
+        char slash = '/';
+        char backSlash = '\\';
+        char underscore = '_';
+        char leftParentheses = '(';
+        char rightParentheses = ')';
+        System.out.println("\n     " + slash + backSlash);
+        System.out.println("    " + slash + "  " + backSlash);
+        System.out.println("   " + slash + underscore + leftParentheses + " " + 
+        rightParentheses + backSlash);
+        System.out.println("  " + slash + "      " + backSlash);
+        System.out.println(" " + slash + underscore + underscore + underscore + slash+ backSlash 
+                + underscore + underscore + underscore + backSlash);
 
         System.out.println("\nЗадача 8: Вывод количества сотен, десятков и единиц числа");
         int num = 123;
