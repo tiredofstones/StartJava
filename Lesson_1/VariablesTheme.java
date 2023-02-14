@@ -99,7 +99,7 @@ public class VariablesTheme {
         int num = 123;
         int hundreds = num / 100;
         int tens = num % 100 / 10;
-        int one = num % 10;
+        int ones = num % 10;
         System.out.println("Число " + num + " содержит:");
         System.out.println(hundreds + " сотню");
         System.out.println(tens + " десятка");
