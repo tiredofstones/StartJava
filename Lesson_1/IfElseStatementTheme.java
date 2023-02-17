@@ -43,7 +43,7 @@ public class IfElseStatementTheme {
         }
         
         System.out.println("\nЗадача 3. Проверка числа");
-        int num3 = 7;
+        int num3 = 8;
         System.out.println("Число : " + num3);
         if (num3 == 0) {
             System.out.println("Число равно 0");
@@ -52,12 +52,12 @@ public class IfElseStatementTheme {
                 System.out.println("Четное");
             } else {
                 System.out.println("Нечетное");
+            }    
             if (num3 > 0) {
                 System.out.println("Положительное");
             } else {
                 System.out.println("Отрицательное");
             } 
-            }
         }
 
         System.out.println("\nЗадача 4. Поиск одинаковых цифр в числах");
@@ -98,13 +98,11 @@ public class IfElseStatementTheme {
 
         System.out.println("\nЗадача 6.Подсчет суммы вклада и начисленных банком %");
         int sumDeposit = 300000;
-        int income = sumDeposit / 100;
+        int income = sumDeposit / 100 * 7;
         if (sumDeposit < 100000) {
-            income = income * 5;
-        } else if (sumDeposit >= 100000 && sumDeposit <= 300000 ) {
-            income = income * 7;
-        } else if (sumDeposit > 300000 ) {
-            income = income * 10;
+            income = sumDeposit / 100 * 5;
+        }  else if (sumDeposit > 300000 ) {
+            income = sumDeposit / 100 * 10;
         }
         System.out.println("Сумма вклада = " + sumDeposit + "\nНачисленные проценты = " + income + 
                 "\nИтого = " + (sumDeposit + income));
@@ -112,38 +110,33 @@ public class IfElseStatementTheme {
         System.out.println("\nЗадача 7. Определение оценки по предметам");
         double ratingHistory = 0.59;
         double ratingProgramming = 0.91;
-        double averageRating = ((ratingProgramming + ratingHistory) / 2);
-        double point1 = 0;
-        double point2 = 0;
-        double gradePoint = ((point1 + point2) / 2);
-        if (ratingHistory <= 0.6) {
-            point1 = 2;
-        } else if (ratingHistory > 0.60 && ratingHistory <= 0.73) {
-            point1 = 3;
+        double grade1 = 2;
+        double grade2 = 2;
+        if (ratingHistory > 0.60 && ratingHistory <= 0.73) {
+            grade1 = 3;
         } else if (ratingHistory > 0.73 && ratingHistory <= 0.91) {
-            point1 = 4;
+            grade1 = 4;
         } else if (ratingHistory > 0.91) {
-            point1 = 5;
+            grade1 = 5;
         }
-        if (ratingProgramming <= 0.6) {
-            point2 = 2;
-        } else if (ratingProgramming > 0.60 && ratingProgramming <= 0.73) {
-            point2 = 3;
+        if (ratingProgramming > 0.60 && ratingProgramming <= 0.73) {
+            grade2 = 3;
         } else if (ratingProgramming > 0.73 && ratingProgramming <= 0.91) {
-            point2 = 4;
+            grade2 = 4;
         } else if (ratingProgramming > 0.91) {
-            point2 = 5;
+            grade2 = 5;
         }
-        System.out.println(point1 + " балла по Истории\n" + point2 + " балла по Программированию" + 
-                "\nСредний балл по предметам = " + gradePoint + "\nСредний рейтинг по предметам = " 
+        double averageGrade = ((grade1 + grade2) / 2);
+        double averageRating = ((ratingProgramming + ratingHistory) / 2);
+        System.out.println(grade1 + " балла по Истории\n" + grade2 + " балла по Программированию" + 
+                "\nСредний балл по предметам = " + averageGrade + "\nСредний рейтинг по предметам = " 
                 + averageRating * 100 + "%");
         
         System.out.println("\nЗадача 8. Расчет прибыли за год");
         int rent = 5000;
         int costPrice = 9000;
         int monthlyIncome = 13000;
-        int monthlyProfit = monthlyIncome - costPrice - rent;
-        int annualProfit = monthlyProfit * 12;
+        int annualProfit = (monthlyIncome - costPrice - rent) * 12;
         if (annualProfit > 0) {
             System.out.println("Годовая прибыль = +" + annualProfit);
         } else {
