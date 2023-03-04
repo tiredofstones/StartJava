@@ -110,25 +110,25 @@ public class IfElseStatementTheme {
         System.out.println("\nЗадача 7. Определение оценки по предметам");
         double ratingHistory = 0.59;
         double ratingProgramming = 0.91;
-        double grade1 = 2;
-        double grade2 = 2;
+        double gradeHistory = 2;
+        double gradeProgramming = 2;
         if (ratingHistory > 0.60 && ratingHistory <= 0.73) {
-            grade1 = 3;
+            gradeHistory = 3;
         } else if (ratingHistory > 0.73 && ratingHistory <= 0.91) {
-            grade1 = 4;
+            gradeHistory = 4;
         } else if (ratingHistory > 0.91) {
-            grade1 = 5;
+            gradeHistory = 5;
         }
         if (ratingProgramming > 0.60 && ratingProgramming <= 0.73) {
-            grade2 = 3;
+            gradeProgramming = 3;
         } else if (ratingProgramming > 0.73 && ratingProgramming <= 0.91) {
-            grade2 = 4;
+            gradeProgramming = 4;
         } else if (ratingProgramming > 0.91) {
-            grade2 = 5;
+            gradeProgramming = 5;
         }
-        double averageGrade = ((grade1 + grade2) / 2);
+        double averageGrade = ((gradeHistory + gradeProgramming) / 2);
         double averageRating = ((ratingProgramming + ratingHistory) / 2);
-        System.out.println(grade1 + " балла по Истории\n" + grade2 + " балла по Программированию" + 
+        System.out.println(gradeHistory + " балла по Истории\n" + gradeProgramming + " балла по Программированию" + 
                 "\nСредний балл по предметам = " + averageGrade + "\nСредний рейтинг по предметам = " 
                 + averageRating * 100 + "%");
         
