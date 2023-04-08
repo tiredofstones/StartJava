@@ -13,8 +13,8 @@ public class CyclesTheme {
             }
             startRange++;
         } while (startRange <= endRange);
-            System.out.println("В отрезке [-10,21] сумма четных чисел = " + sumEven + 
-                    "; сумма нечетных чисел = " + sumOdd);
+        System.out.println("В отрезке [-10,21] сумма четных чисел = " + sumEven + 
+                "; сумма нечетных чисел = " + sumOdd);
 
         System.out.println("\nЗадача 2. Вывод чисел в интервале (min и max) в порядке убывания");
         int number1 = 10;
@@ -34,7 +34,7 @@ public class CyclesTheme {
         if (number1 > max){
             max = number1;
         }
-            System.out.println(min + " " + max);
+        System.out.println(min + " " + max);
         for (int i = max - 1; i > min; i--) {  
             System.out.print(i + " ");  
         }
@@ -42,13 +42,14 @@ public class CyclesTheme {
         System.out.println("\n\nЗадача 3. Вывод реверсивного числа и суммы его цифр");
         int number4 = 1234;
         int sumDigits = 0;
-        int copyNumber4 = number4;
+        // int reverseDigit = number4 % 10;
         while(number4 > 0) {
-            System.out.print(number4 % 10); 
+            int reverseDigit = number4 % 10;
+            sumDigits = sumDigits + reverseDigit;
+            System.out.print(reverseDigit); 
             number4 /= 10;
         } 
-        System.out.println("\nСумма цифр числа  " + (((copyNumber4 % 10)+((copyNumber4 / 10) % 10) 
-                + ((copyNumber4 / 100) % 10)) + ((copyNumber4 / 1000))));
+            System.out.println("\nСумма цифр числа  " + sumDigits);
 
         System.out.println("\nЗадача 4. Вывод чисел на консоль в несколько строк");
         int startInerval = 1;
@@ -93,29 +94,29 @@ public class CyclesTheme {
         }
         System.out.println();
 
-        int symbolInLine = 0;
-        int numberOfLines = 5;
-        while (symbolInLine < 5) {
-            while (numberOfLines > 0) {
+        int symbolInLines = 0;
+        int numberLines = 5;
+        while (symbolInLines < 5) {
+            while (numberLines > 0) {
                 System.out.print('#');
-                numberOfLines--;
+                numberLines--;
             }
             System.out.println();
-            symbolInLine++;
-            numberOfLines = 5 - symbolInLine;
+            symbolInLines++;
+            numberLines = 5 - symbolInLines;
         }
         System.out.println();
 
-        symbolInLine = 0;
-        numberOfLines = 5;
+        symbolInLines = 0;
+        numberLines = 5;
         do {
             System.out.println('$');
             do {
                 System.out.print('$');
-                numberOfLines--;
-            } while (numberOfLines == 3);
-            symbolInLine++;
-        } while (symbolInLine <= 3);
+                numberLines--;
+            } while (numberLines == 3);
+            symbolInLines++;
+        } while (symbolInLines <= 3);
         System.out.println();
           
         System.out.println("\nЗадача 7.Отображение ASCII-символов");
@@ -131,34 +132,36 @@ public class CyclesTheme {
 
         System.out.println("\nЗадача 8.Проверка, является ли число палиндромом");
         int number8 = 1234321;
-        int reversedNumbers = 0;
+        int reversedNumber = 0;
         int copyNumber8 = number8; 
         while (number8 > 0) {
-            reversedNumbers = reversedNumbers * 10 + number8 % 10;
+            reversedNumber = reversedNumber * 10 + number8 % 10;
             number8 /= 10;
         }
-        if (reversedNumbers == copyNumber8) {   
+        if (reversedNumber == copyNumber8) {   
             System.out.println("Число " + copyNumber8 + " является палиндромом");
+        } else {
+            System.out.println("Число " + copyNumber8 + " не является палиндромом");
         }
 
         System.out.println("\nЗадача 9.Определение, является ли число счастливым");
         int numberLucky = 333555;
         int copyNumberLucky = numberLucky;
-        int sumFirst = 0;
-        int sumSecond = 0;
+        int sumLeftHalf = 0;
+        int sumRightHalf = 0;
         int counter3 = 0;
         while (numberLucky > 0) { 
             counter3++;
             if (counter3 <= 3) {
-                sumSecond += (numberLucky % 10);
+                sumRightHalf += (numberLucky % 10);
             } else {
-                sumFirst += (numberLucky % 10);
+                sumLeftHalf += (numberLucky % 10);
             }
             numberLucky /= 10;      
         }
-        System.out.println("Сумма первых трёх цифр " + " = " + sumFirst + 
-                "\nСумма последних трёх цифр " + " = " + sumSecond);
-        if (sumFirst == sumSecond) {
+        System.out.println("Сумма первых трёх цифр " + " = " + sumLeftHalf + 
+                "\nСумма последних трёх цифр " + " = " + sumRightHalf);
+        if (sumLeftHalf == sumRightHalf) {
             System.out.println("Число " + copyNumberLucky + " счастливое");
         } else { 
             System.out.println("Число " + copyNumberLucky + " несчастливое");
