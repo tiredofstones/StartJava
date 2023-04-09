@@ -42,7 +42,6 @@ public class CyclesTheme {
         System.out.println("\n\nЗадача 3. Вывод реверсивного числа и суммы его цифр");
         int number4 = 1234;
         int sumDigits = 0;
-        // int reverseDigit = number4 % 10;
         while(number4 > 0) {
             int reverseDigit = number4 % 10;
             sumDigits = sumDigits + reverseDigit;
