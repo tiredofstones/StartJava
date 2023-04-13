@@ -43,12 +43,12 @@ public class CyclesTheme {
         int number4 = 1234;
         int sumDigits = 0;
         while(number4 > 0) {
-            int reverseDigit = number4 % 10;
-            sumDigits = sumDigits + reverseDigit;
-            System.out.print(reverseDigit); 
+            int remainder = number4 % 10;
+            sumDigits += remainder;
+            System.out.print(remainder); 
             number4 /= 10;
         } 
-            System.out.println("\nСумма цифр числа  " + sumDigits);
+        System.out.println("\nСумма цифр числа  " + sumDigits);
 
         System.out.println("\nЗадача 4. Вывод чисел на консоль в несколько строк");
         int startInerval = 1;
@@ -93,20 +93,20 @@ public class CyclesTheme {
         }
         System.out.println();
 
-        int symbolInLines = 0;
+        int charsInLine = 0;
         int numberLines = 5;
-        while (symbolInLines < 5) {
+        while (charsInLine < 5) {
             while (numberLines > 0) {
                 System.out.print('#');
                 numberLines--;
             }
             System.out.println();
-            symbolInLines++;
-            numberLines = 5 - symbolInLines;
+            charsInLine++;
+            numberLines = 5 - charsInLine;
         }
         System.out.println();
 
-        symbolInLines = 0;
+        charsInLine = 0;
         numberLines = 5;
         do {
             System.out.println('$');
@@ -114,18 +114,18 @@ public class CyclesTheme {
                 System.out.print('$');
                 numberLines--;
             } while (numberLines == 3);
-            symbolInLines++;
-        } while (symbolInLines <= 3);
+            charsInLine++;
+        } while (charsInLine <= 3);
         System.out.println();
           
         System.out.println("\nЗадача 7.Отображение ASCII-символов");
         System.out.printf("%6s%6s%n", "Dec", " Char");
         for (int i = 1; i < 123; i++) {
             if (i % 2 > 0 && i < 48) {
-                System.out.printf("%6d%6c%n",i,i);
+                System.out.printf("%6d%6c%n", i, i);
             }
             if (i % 2  == 0 && i > 97 && i < 123) {
-                System.out.printf("%6d%6c%n",i,i);
+                System.out.printf("%6d%6c%n", i, i);
             } 
         }
 

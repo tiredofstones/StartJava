@@ -1,37 +1,32 @@
 public class Calculator {   
     public static void main(String[] args) {
-        int a = 51;
-        int b = 122;
+        int a = 58;
+        int b = 7;
         char sign = '^';
-        long result;
+        long result = 0;
         if (sign == '+') {
             result = a + b;
-            System.out.println(a + " " + sign + " " + b + " = " + result);
         }
-        if (sign == '-') {
+        else if (sign == '-') {
             result = a - b;
-            System.out.println(a + " " + sign + " " + b + " = " + result);
         }
-        if (sign == '*') {
+        else if (sign == '*') {
             result = a * b;
-            System.out.println(a + " " + sign + " " + b + " = " + result);
         }
-        if (sign == '/') {
-            double result1 = 1.0 * a / b;
-            System.out.println(a + " " + sign + " " + b + " = " + result1);
+        else if (sign == '/') {
+             result = a / b;
         }
-        if (sign == '^') {
+        else if (sign == '^') {
             result = 1;
             for (int i = 1; i <= b; i++) {
                 result *= a;
                 if (i == b) {
-                    System.out.println(a + " " + sign + " " + b + " = " + result);  
                 }
             }
         }
-        if (sign == '%') {
+        else if (sign == '%') {
             result = a % b;
-            System.out.println(a + " " + sign + " " + b + " = " + result);
         }
+        System.out.println(a + " " + sign + " " + b + " = " + result);
     }
 }
