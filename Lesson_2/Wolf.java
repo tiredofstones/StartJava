@@ -7,11 +7,11 @@ public class Wolf {
 
     void move() {
         System.out.println("Идет");
-        }
+    }
 
     void sit() {
         System.out.println("Сидит");
-        }  
+    }  
 
     void run() {
         System.out.println("Бежит");

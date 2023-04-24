@@ -9,7 +9,6 @@ public class WolfTest {
         System.out.println("Пол - " + direWolf.sex + "\nКличка - " + direWolf.nickname + "\nВес - "
                 + direWolf.weight + "\nВозраст - " + direWolf.age + "\nОкрас - " + direWolf.color);
 
-
         direWolf.move();
         direWolf.sit();
         direWolf.run();
