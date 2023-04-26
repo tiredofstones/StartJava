@@ -8,7 +8,7 @@ public class WolfTest {
         direWolf.setColor("Белый");
         System.out.println("Пол - " + direWolf.getSex() + "\nКличка - " + direWolf.getNickName() + 
                 "\nВес - " + direWolf.getWeight() + "\nВозраст - " + direWolf.getAge() + 
-                        "\nОкрас - " + direWolf.getColor());
+                "\nОкрас - " + direWolf.getColor());
 
         direWolf.move();
         direWolf.sit();
